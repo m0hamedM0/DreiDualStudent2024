@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Sales Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <h1>Customer Sales Dashboard</h1>
+
+<select id="sortSelect" onchange="fetchCustomers()">
+    <option value="INDEX_ASC">Index (Ascending)</option>
+    <option value="INDEX_DESC">Index (Descending)</option>
+    <option value="Customer Id_ASC">Customer ID (Ascending)</option>
+    <option value="Customer Id_DESC">Customer ID (Descending)</option>
+    <option value="First Name_ASC">First Name (A-Z)</option>
+    <option value="First Name_DESC">First Name (Z-A)</option>
+    <option value="Last Name_ASC">Last Name (A-Z)</option>
+    <option value="Last Name_DESC">Last Name (Z-A)</option>
+    <option value="SALES 2021_ASC">Sales 2021 (Low to High)</option>
+    <option value="SALES 2021_DESC">Sales 2021 (High to Low)</option>
+    <option value="SALES 2022_ASC">Sales 2022 (Low to High)</option>
+    <option value="SALES 2022_DESC">Sales 2022 (High to Low)</option>
+</select>
+
+
+    <div id="customer-table">
+    </div>
+
+    <div>
+        <canvas id="salesShareChart"></canvas>
+    </div>
+
+    <div>
+        <canvas id="salesDevelopmentChart"></canvas>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
